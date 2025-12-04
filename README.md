@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🔓 Petition To Unleash Noah Kerr
 
-## Getting Started
+A fun petition website with a faux "live" signature counter and highest bidder leaderboard.
 
-First, run the development server:
+## Features
+
+- **Giant Header**: Bold "PETITION TO UNLEASH NOAH KERR" with animated glowing gradient text
+- **Live Signature Counter**: Starts at 4,322 and increments randomly every few seconds with a bounce animation
+- **Signature Collection**: Users can enter their name to "sign" the petition
+- **Bidding System**: Users can place bids to support the cause
+- **Leaderboard**: Shows highest bidders, sorted by amount
+
+### Hardcoded Bidders (sorted by bid):
+1. **Fogarty** - $22,000 (highest)
+2. **SinRalt** - $21,999 (second highest)
+3. **Mrs. Kerr** - $25 (middle)
+4. **Ben Hill** - $1 (second lowest)
+5. **Notaso** - $0.01 (lowest)
+
+## Running Locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deploy to Railway
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Option 1: Via Railway Dashboard
+1. Go to [railway.app](https://railway.app) and sign in
+2. Click "New Project" → "Deploy from GitHub repo"
+3. Connect your GitHub and select this repository
+4. Railway will auto-detect Next.js and deploy
 
-## Learn More
+### Option 2: Via Railway CLI
+```bash
+# Install Railway CLI
+npm install -g @railway/cli
 
-To learn more about Next.js, take a look at the following resources:
+# Login to Railway
+railway login
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Initialize project
+railway init
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# Deploy
+railway up
+```
 
-## Deploy on Vercel
+### Environment Variables (optional)
+No environment variables required for basic functionality.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Tech Stack
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Next.js 16 (App Router)
+- TypeScript
+- Tailwind CSS
+- React
+
+## Project Structure
+
+```
+unleash-noah/
+├── app/
+│   ├── globals.css    # Styles with animations
+│   ├── layout.tsx     # Root layout
+│   └── page.tsx       # Main petition page
+├── railway.json       # Railway deployment config
+└── package.json
+```
+
+---
+
+**FREE NOAH KERR 2025** 🔓
